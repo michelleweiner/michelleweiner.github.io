@@ -151,6 +151,29 @@
     .industry .project-details h3{font-size:clamp(40px,5vw,68px)}
     @media(max-width:990px){.hero .container{grid-template-columns:1fr}.hero-art{display:none}.industry{grid-template-columns:1fr}.industry-visual{min-height:265px}.industry .project-details{padding:38px}}
     @media(max-width:650px){.hero .container{display:block}.industry .project-details{padding:30px}.industry{margin-top:45px}.industry-visual{min-height:230px}.industry-mark strong{font-size:43px}}
+
+    /* v5: real UX mockups and editorial hero. Images are cropped directly from supplied project exports. */
+    .hero{padding:90px 0 112px}
+    .hero .container{grid-template-columns:minmax(0,1.25fr) minmax(320px,.85fr);gap:45px;align-items:center}
+    .hero-copy{position:relative;z-index:3}
+    .hero h1{font-size:clamp(55px,6.1vw,91px);line-height:1.16;letter-spacing:-.045em;margin:32px 0 30px}
+    .hero .sub{max-width:670px}
+    .hero-art{display:block;min-width:0;height:545px;position:relative;isolation:isolate}
+    .hero-art::before,.hero-art::after{content:none}
+    .hero-blob{position:absolute;z-index:-1;filter:none}
+    .hero-blob-plum{background:var(--orchid);width:84%;height:75%;top:8%;left:0;border-radius:56% 44% 45% 55% / 49% 62% 38% 51%;transform:rotate(-20deg)}
+    .hero-blob-teal{background:var(--teal);width:57%;height:53%;right:-2%;bottom:8%;border-radius:60% 40% 56% 44% / 54% 57% 43% 46%;transform:rotate(12deg)}
+    .hero-squiggle{position:absolute;bottom:2%;left:2%;width:110px;height:95px;border:7px solid var(--olive);border-top-color:transparent;border-right-color:transparent;border-radius:50%;transform:rotate(-32deg);opacity:.95}
+    .hero-phone{position:absolute;display:block;width:auto;height:86%;object-fit:fill;border-radius:28px;box-shadow:0 22px 32px rgba(37,21,34,.22);background:white}
+    .hero-phone-camp{height:88%;left:13%;top:2%;z-index:1;transform:rotate(-7deg)}
+    .hero-phone-nudge{height:84%;right:0;top:14%;z-index:2;transform:rotate(7deg)}
+    .project-screen{display:block;height:365px;width:auto;max-width:80%;object-fit:contain;box-shadow:14px 17px 28px rgba(31,34,33,.19);border-radius:25px;transform:rotate(-5deg);z-index:2}
+    .art-nudge .project-screen{height:270px;transform:rotate(5deg)}
+    .art-note{color:#203308}
+    @media(max-width:1050px){.hero .container{grid-template-columns:minmax(0,1fr) minmax(270px,.7fr);gap:18px}.hero h1{font-size:clamp(51px,6.2vw,80px)}.hero-art{height:450px}.hero-phone{border-radius:20px}}
+    @media(max-width:750px){.hero{padding:75px 0 70px}.hero .container{display:flex;flex-direction:column;align-items:stretch;gap:20px}.hero h1{font-size:clamp(53px,10vw,76px);line-height:1.13}.hero-art{display:block;height:430px;width:min(100%,430px);margin:4px auto 0}.hero-phone{border-radius:22px}.hero-phone-camp{left:18%}.hero-phone-nudge{right:7%}}
+    @media(max-width:450px){.hero-art{height:365px}.hero-phone{border-radius:18px}.hero-phone-camp{left:12%}.hero-phone-nudge{right:0}.nav-links{gap:14px}.brand>span:last-child{display:none}}
+
   </style>
 </head>
 <body>
@@ -165,14 +188,18 @@
       <h1><span>Hi, I'm Michelle.</span><span>I design with a</span><span class="story">storyteller's eye.</span></h1>
       <p class="sub">I create thoughtful digital experiences through curiosity, empathy, and a background in visual storytelling.</p>
       <div class="hero-cta"><a class="btn" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="underlink" href="#about">A little about me</a></div></div>
-      <div class="hero-art" aria-hidden="true"><div class="cutout"><span>mw</span><small>Design + storytelling</small></div><div class="line"></div></div>
+      <div class="hero-art" aria-label="Screens from Michelle’s Happy Camper and Nudge UX projects">
+        <div class="hero-blob hero-blob-plum"></div><div class="hero-blob hero-blob-teal"></div><div class="hero-squiggle" aria-hidden="true"></div>
+        <img class="hero-phone hero-phone-camp" src="assets/happy-camper-welcome.jpg" alt="Happy Camper app welcome and planning screen" width="205" height="812" loading="eager">
+        <img class="hero-phone hero-phone-nudge" src="assets/nudge-subscriptions.jpg" alt="Nudge app all subscriptions screen" width="383" height="788" loading="eager">
+      </div>
     </div></section>
     <div class="ribbon"><div class="container"><span>Thoughtful by design</span><b aria-hidden="true">✳</b><span>Curious by nature</span><b aria-hidden="true">✳</b><span>Storytelling at heart</span></div></div>
     <section class="work" id="work"><div class="container">
       <div class="section-heading"><div><div class="kicker">The work</div><h2>Selected projects<span style="color:var(--teal)">.</span></h2></div><p>Exploring real problems, understanding people, and making complex things feel simple.</p></div>
       <div class="project-grid">
-        <article class="project-card"><div class="project-art art-camp" role="img" aria-label="Concept illustration for Happy Camper, not an actual project screenshot"><div class="phone"><div class="phone-logo">HAPPY CAMPER</div><div class="screen-heading">Find their<br>happy place.</div><div class="pills"><i></i><i></i><i></i></div><div class="shape"></div><div class="shape small"></div></div><span class="art-note">Illustrative preview</span></div><div class="project-details"><span class="number">01 / Mobile app · UX case study</span><h3>Happy Camper</h3><p>Summer camp planning, made less overwhelming. An app concept to help parents discover, compare, and organize camps that fit their families.</p><div class="chips"><span class="chip">User research</span><span class="chip">Information architecture</span><span class="chip">UI design</span></div><p class="availability">Full case study & actual screens coming soon.</p></div></article>
-        <article class="project-card"><div class="project-art art-nudge" role="img" aria-label="Concept illustration for Nudge, not an actual project screenshot"><div class="phone"><div class="phone-logo">NUDGE</div><div class="screen-heading">Know what<br>you pay.</div><div class="shape"></div><div class="shape small"></div></div><span class="art-note">Illustrative preview</span></div><div class="project-details"><span class="number">02 / Product design · UX case study</span><h3>Nudge</h3><p>A simpler way to see subscription spending, stay ahead of renewals, and feel more in control.</p><div class="chips"><span class="chip">Prototyping</span><span class="chip">Usability testing</span><span class="chip">UX/UI design</span></div><p class="availability">Full case study & actual screens coming soon.</p></div></article>
+        <article class="project-card"><div class="project-art art-camp"><img class="project-screen camp-screen" src="assets/happy-camper-explore.jpg" alt="Actual Happy Camper Explore Camps screen" loading="lazy"><span class="art-note">Happy Camper · App design</span></div><div class="project-details"><span class="number">01 / Mobile app · UX case study</span><h3>Happy Camper</h3><p>Summer camp planning, made less overwhelming. An app concept to help parents discover, compare, and organize camps that fit their families.</p><div class="chips"><span class="chip">User research</span><span class="chip">Information architecture</span><span class="chip">UI design</span></div><p class="availability">Full case study coming soon.</p></div></article>
+        <article class="project-card"><div class="project-art art-nudge"><img class="project-screen nudge-screen" src="assets/nudge-overview.jpg" alt="Actual Nudge subscriptions overview screen" loading="lazy"><span class="art-note">Nudge · App design</span></div><div class="project-details"><span class="number">02 / Product design · UX case study</span><h3>Nudge</h3><p>A simpler way to see subscription spending, stay ahead of renewals, and feel more in control.</p><div class="chips"><span class="chip">Prototyping</span><span class="chip">Usability testing</span><span class="chip">UX/UI design</span></div><p class="availability">Full case study coming soon.</p></div></article>
         <article class="project-card"><div class="project-art art-home" role="img" aria-label="Concept illustration for House2Home, not an actual project screenshot"><div class="frame-art"><div class="arch"></div><strong>House2Home</strong></div><span class="art-note">Illustrative preview</span></div><div class="project-details"><span class="number">03 / Five-day design sprint</span><h3>House2Home</h3><p>Making it easier to move from décor inspiration to confident decisions, through a focused design sprint.</p><div class="chips"><span class="chip">Design sprint</span><span class="chip">Ideation</span><span class="chip">Prototype testing</span></div><p class="availability">Full case study & actual screens coming soon.</p></div></article>
       </div>
       <article class="industry" aria-labelledby="tirivelo-heading">
