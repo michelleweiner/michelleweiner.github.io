@@ -176,23 +176,24 @@
     @media(max-width:450px){.hero-art{height:365px}.hero-phone{border-radius:14px}.hero-phone-camp{left:12%}.hero-phone-nudge{right:2%;height:72%}.nav-links{gap:14px}.brand>span:last-child{display:none}}
 
 
-    /* v7: New composition, not another scaling tweak. Screens are fully visible,
-       in separate editorial project panels rather than tilted faux-phone masks. */
-    .hero-art.hero-gallery{height:535px;display:grid;grid-template-columns:.88fr 1.12fr;gap:17px;align-items:center;padding:18px 0;overflow:visible;isolation:isolate}
+    /* Refined editorial showcase: the extra-tall Happy Camper source image
+       receives more vertical room, so it reads closer in size to Nudge.
+       Both are fully visible at their natural proportions (no cropping). */
+    .hero-art.hero-gallery{height:640px;display:grid;grid-template-columns:1fr 1.04fr;gap:14px;align-items:center;padding:12px 0;overflow:visible;isolation:isolate}
     .hero-gallery .gallery-flourish{position:absolute;z-index:-1;pointer-events:none}
-    .hero-gallery .gallery-flourish-plum{width:74%;height:77%;background:var(--orchid);border-radius:52% 48% 41% 59%;top:6%;left:3%;transform:rotate(-22deg)}
-    .hero-gallery .gallery-flourish-teal{width:44%;height:46%;background:var(--teal);border-radius:49% 51% 67% 33%;right:-4%;bottom:4%;transform:rotate(17deg)}
-    .hero-gallery .gallery-panel{position:relative;min-width:0;border-radius:18px;background:#fffaf1;border:1px solid rgba(68,16,47,.14);box-shadow:0 18px 36px rgba(68,16,47,.14);padding:14px 11px 13px;display:flex;flex-direction:column;align-items:center;gap:9px}
-    .hero-gallery .gallery-panel-camp{height:412px;margin-top:34px}
-    .hero-gallery .gallery-panel-nudge{height:454px;margin-top:-8px}
+    .hero-gallery .gallery-flourish-plum{width:80%;height:72%;background:var(--orchid);border-radius:52% 48% 41% 59%;top:13%;left:0;transform:rotate(-20deg)}
+    .hero-gallery .gallery-flourish-teal{width:46%;height:45%;background:var(--teal);border-radius:49% 51% 67% 33%;right:-3%;bottom:8%;transform:rotate(17deg)}
+    .hero-gallery .gallery-panel{position:relative;min-width:0;border-radius:18px;background:#fffaf1;border:1px solid rgba(68,16,47,.14);box-shadow:0 18px 36px rgba(68,16,47,.13);padding:12px 8px 12px;display:flex;flex-direction:column;align-items:center;gap:9px}
+    .hero-gallery .gallery-panel-camp{height:594px;margin-top:0}
+    .hero-gallery .gallery-panel-nudge{height:461px;margin-top:34px}
     .hero-gallery .gallery-image{width:100%;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .hero-gallery .gallery-image img{width:auto;height:100%;max-width:100%;object-fit:contain;border-radius:9px;box-shadow:none;transform:none;display:block}
-    .hero-gallery .gallery-label{display:flex;width:100%;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--wine);text-align:center}
+    .hero-gallery .gallery-image img{display:block;width:auto;height:100%;max-width:100%;object-fit:contain;object-position:center;border-radius:9px;box-shadow:none;transform:none}
+    .hero-gallery .gallery-label{display:flex;width:100%;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:var(--wine);text-align:center;flex-shrink:0}
     .hero-gallery .gallery-label strong{font:600 17px/1.2 'Fraunces',Georgia,serif}
     .hero-gallery .gallery-label small{font-size:10px;letter-spacing:.04em;color:var(--teal)}
-    @media(max-width:1050px){.hero-art.hero-gallery{height:450px;gap:10px}.hero-gallery .gallery-panel-camp{height:352px}.hero-gallery .gallery-panel-nudge{height:382px}.hero-gallery .gallery-label strong{font-size:15px}}
-    @media(max-width:750px){.hero-art.hero-gallery{width:min(100%,500px);height:480px;display:grid;grid-template-columns:.9fr 1.1fr;gap:14px;margin:0 auto}.hero-gallery .gallery-panel-camp{height:385px}.hero-gallery .gallery-panel-nudge{height:418px}}
-    @media(max-width:450px){.hero-art.hero-gallery{height:355px;gap:9px}.hero-gallery .gallery-panel{padding:9px 6px}.hero-gallery .gallery-panel-camp{height:290px}.hero-gallery .gallery-panel-nudge{height:315px}.hero-gallery .gallery-label strong{font-size:13px}.hero-gallery .gallery-label small{font-size:9px}}
+    @media(max-width:1050px){.hero-art.hero-gallery{height:540px;gap:10px}.hero-gallery .gallery-panel-camp{height:505px}.hero-gallery .gallery-panel-nudge{height:396px}.hero-gallery .gallery-label strong{font-size:15px}}
+    @media(max-width:750px){.hero-art.hero-gallery{width:min(100%,470px);height:490px;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 auto}.hero-gallery .gallery-panel-camp{height:468px}.hero-gallery .gallery-panel-nudge{height:368px}}
+    @media(max-width:450px){.hero-art.hero-gallery{height:360px;gap:8px}.hero-gallery .gallery-panel{padding:8px 5px}.hero-gallery .gallery-panel-camp{height:348px}.hero-gallery .gallery-panel-nudge{height:279px}.hero-gallery .gallery-label strong{font-size:13px}.hero-gallery .gallery-label small{font-size:9px}}
   </style>
 </head>
 <body>
