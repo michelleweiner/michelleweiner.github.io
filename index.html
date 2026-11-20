@@ -194,6 +194,21 @@
     @media(max-width:1050px){.hero-art.hero-gallery{height:540px;gap:10px}.hero-gallery .gallery-panel-camp{height:505px}.hero-gallery .gallery-panel-nudge{height:396px}.hero-gallery .gallery-label strong{font-size:15px}}
     @media(max-width:750px){.hero-art.hero-gallery{width:min(100%,470px);height:490px;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 auto}.hero-gallery .gallery-panel-camp{height:468px}.hero-gallery .gallery-panel-nudge{height:368px}}
     @media(max-width:450px){.hero-art.hero-gallery{height:360px;gap:8px}.hero-gallery .gallery-panel{padding:8px 5px}.hero-gallery .gallery-panel-camp{height:348px}.hero-gallery .gallery-panel-nudge{height:279px}.hero-gallery .gallery-label strong{font-size:13px}.hero-gallery .gallery-label small{font-size:9px}}
+
+    /* Clear original aspect ratios, without height/width distortion or cropped containers. */
+    .hero-art.uncropped-stage{display:flex;align-items:center;justify-content:center;gap:20px;height:610px;position:relative;isolation:isolate;padding:28px 10px;overflow:visible}
+    .uncropped-stage::before,.uncropped-stage::after{display:none}
+    .uncropped-stage .stage-shape{position:absolute;z-index:-1;pointer-events:none}
+    .uncropped-stage .stage-plum{background:var(--orchid);width:75%;height:72%;top:12%;left:4%;border-radius:56% 44% 45% 55% / 48% 56% 44% 52%;transform:rotate(-19deg)}
+    .uncropped-stage .stage-teal{background:var(--teal);width:52%;height:46%;right:-1%;bottom:5%;border-radius:45% 55% 64% 36%;transform:rotate(15deg)}
+    .uncropped-stage .stage-screen{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;min-width:0;padding:14px 9px 12px;background:#fffaf1;border:1px solid rgba(68,16,47,.11);border-radius:22px;box-shadow:0 20px 34px rgba(68,16,47,.16)}
+    .uncropped-stage .stage-screen img{display:block;width:auto;max-width:100%;height:auto;max-height:480px;object-fit:contain;object-position:center;transform:none;border-radius:9px}
+    .uncropped-stage .stage-screen span{font:600 15px/1.25 'Fraunces',Georgia,serif;color:var(--wine)}
+    .uncropped-stage .stage-camp{width:37%;transform:translateY(-18px) rotate(-3deg)}
+    .uncropped-stage .stage-nudge{width:60%;transform:translateY(22px) rotate(3deg)}
+    @media(max-width:1050px){.hero-art.uncropped-stage{height:505px;gap:12px}.uncropped-stage .stage-screen img{max-height:390px}.uncropped-stage .stage-screen{padding:10px 6px}}
+    @media(max-width:750px){.hero-art.uncropped-stage{height:470px;max-width:470px;width:100%;margin:0 auto;gap:15px}.uncropped-stage .stage-screen img{max-height:365px}}
+    @media(max-width:450px){.hero-art.uncropped-stage{height:350px;gap:9px;padding:15px 0}.uncropped-stage .stage-screen img{max-height:265px}.uncropped-stage .stage-screen span{font-size:12px}.uncropped-stage .stage-screen{padding:7px 5px;border-radius:13px}}
   </style>
 </head>
 <body>
@@ -208,16 +223,16 @@
       <h1><span>Hi, I'm Michelle.</span><span>I design with a</span><span class="story">storyteller's eye.</span></h1>
       <p class="sub">I create thoughtful digital experiences through curiosity, empathy, and a background in visual storytelling.</p>
       <div class="hero-cta"><a class="btn" href="#work">Explore my work <span aria-hidden="true">↗</span></a><a class="underlink" href="#about">A little about me</a></div></div>
-      <div class="hero-art hero-gallery" aria-label="Full screenshots from the Happy Camper and Nudge projects">
-        <div class="gallery-flourish gallery-flourish-plum" aria-hidden="true"></div>
-        <div class="gallery-flourish gallery-flourish-teal" aria-hidden="true"></div>
-        <div class="gallery-panel gallery-panel-camp">
-          <div class="gallery-image"><img src="assets/happy-camper-welcome.jpg" alt="Complete Happy Camper welcome and planning screen" width="205" height="812" loading="eager"></div>
-          <div class="gallery-label"><strong>Happy Camper</strong><small>Camp planning</small></div>
+      <div class="hero-art uncropped-stage" aria-label="Full Happy Camper and Nudge interface screenshots">
+        <div class="stage-shape stage-plum" aria-hidden="true"></div>
+        <div class="stage-shape stage-teal" aria-hidden="true"></div>
+        <div class="stage-screen stage-camp">
+          <img src="assets/happy-camper-welcome.jpg" alt="Full Happy Camper welcome screen, without cropping" width="205" height="812" loading="eager">
+          <span>Happy Camper</span>
         </div>
-        <div class="gallery-panel gallery-panel-nudge">
-          <div class="gallery-image"><img src="assets/nudge-subscriptions.jpg" alt="Complete Nudge all subscriptions screen" width="383" height="788" loading="eager"></div>
-          <div class="gallery-label"><strong>Nudge</strong><small>Subscription management</small></div>
+        <div class="stage-screen stage-nudge">
+          <img src="assets/nudge-subscriptions.jpg" alt="Full Nudge subscriptions screen, without cropping" width="383" height="788" loading="eager">
+          <span>Nudge</span>
         </div>
       </div>
     </div></section>
