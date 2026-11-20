@@ -164,15 +164,16 @@
     .hero-blob-plum{background:var(--orchid);width:84%;height:75%;top:8%;left:0;border-radius:56% 44% 45% 55% / 49% 62% 38% 51%;transform:rotate(-20deg)}
     .hero-blob-teal{background:var(--teal);width:57%;height:53%;right:-2%;bottom:8%;border-radius:60% 40% 56% 44% / 54% 57% 43% 46%;transform:rotate(12deg)}
     .hero-squiggle{position:absolute;bottom:2%;left:2%;width:110px;height:95px;border:7px solid var(--olive);border-top-color:transparent;border-right-color:transparent;border-radius:50%;transform:rotate(-32deg);opacity:.95}
-    .hero-phone{position:absolute;display:block;width:auto;height:86%;object-fit:fill;border-radius:28px;box-shadow:0 22px 32px rgba(37,21,34,.22);background:white}
-    .hero-phone-camp{height:88%;left:13%;top:2%;z-index:1;transform:rotate(-7deg)}
-    .hero-phone-nudge{height:84%;right:0;top:14%;z-index:2;transform:rotate(7deg)}
+    .hero-phone{position:absolute;display:block;width:auto;max-width:none;object-fit:contain;object-position:center;border-radius:20px;box-shadow:0 18px 28px rgba(37,21,34,.15);background:transparent;transform-origin:center center}
+    /* The supplied Happy Camper capture is extremely tall and narrow. Keep native proportions. */
+    .hero-phone-camp{height:92%;left:11%;top:1%;z-index:2;transform:rotate(-5deg)}
+    .hero-phone-nudge{height:75%;right:0;bottom:3%;top:auto;z-index:3;transform:rotate(5deg)}
     .project-screen{display:block;height:365px;width:auto;max-width:80%;object-fit:contain;box-shadow:14px 17px 28px rgba(31,34,33,.19);border-radius:25px;transform:rotate(-5deg);z-index:2}
     .art-nudge .project-screen{height:270px;transform:rotate(5deg)}
     .art-note{color:#203308}
-    @media(max-width:1050px){.hero .container{grid-template-columns:minmax(0,1fr) minmax(270px,.7fr);gap:18px}.hero h1{font-size:clamp(51px,6.2vw,80px)}.hero-art{height:450px}.hero-phone{border-radius:20px}}
-    @media(max-width:750px){.hero{padding:75px 0 70px}.hero .container{display:flex;flex-direction:column;align-items:stretch;gap:20px}.hero h1{font-size:clamp(53px,10vw,76px);line-height:1.13}.hero-art{display:block;height:430px;width:min(100%,430px);margin:4px auto 0}.hero-phone{border-radius:22px}.hero-phone-camp{left:18%}.hero-phone-nudge{right:7%}}
-    @media(max-width:450px){.hero-art{height:365px}.hero-phone{border-radius:18px}.hero-phone-camp{left:12%}.hero-phone-nudge{right:0}.nav-links{gap:14px}.brand>span:last-child{display:none}}
+    @media(max-width:1050px){.hero .container{grid-template-columns:minmax(0,1fr) minmax(300px,.8fr);gap:18px}.hero h1{font-size:clamp(51px,6.2vw,80px)}.hero-art{height:470px}.hero-phone{border-radius:18px}}
+    @media(max-width:750px){.hero{padding:75px 0 70px}.hero .container{display:flex;flex-direction:column;align-items:stretch;gap:20px}.hero h1{font-size:clamp(53px,10vw,76px);line-height:1.13}.hero-art{display:block;height:460px;width:min(100%,450px);margin:4px auto 0}.hero-phone{border-radius:18px}.hero-phone-camp{left:15%}.hero-phone-nudge{right:5%}}
+    @media(max-width:450px){.hero-art{height:365px}.hero-phone{border-radius:14px}.hero-phone-camp{left:12%}.hero-phone-nudge{right:2%;height:72%}.nav-links{gap:14px}.brand>span:last-child{display:none}}
 
   </style>
 </head>
