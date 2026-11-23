@@ -317,6 +317,10 @@
     
 .case-study-link{display:inline-flex;align-items:center;gap:14px;align-self:flex-start;margin-top:25px;padding:11px 19px;border-radius:99px;background:var(--teal);color:#fff;text-decoration:none;font-size:13px;font-weight:700;transition:background .2s}
 .case-study-link:hover{background:var(--wine)}
+
+/* Featured Happy Camper card: eliminate the empty strip under the artwork. */
+@media(min-width:901px){.project-card:first-child{align-items:stretch}.project-card:first-child .project-art{height:100%;aspect-ratio:auto;min-height:0}.project-card:first-child .portfolio-project-image{height:100%;width:100%;object-fit:cover;object-position:center}}
+@media(max-width:900px){.project-card:first-child .project-art{aspect-ratio:3/2;height:auto}}
 </style>
 </head>
 <body>
