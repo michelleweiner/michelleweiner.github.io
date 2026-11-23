@@ -306,7 +306,14 @@
     .hero-preview-nudge{right:0;bottom:9%;transform:rotate(7deg)}
     @media(max-width:750px){.portfolio-hero{height:370px;max-width:460px;width:100%;margin:5px auto 0}}
     @media(max-width:450px){.portfolio-hero{height:310px}}
-\n    /* Approved Figma homepage hero — preserve native proportions without cropping. */\n    .hero-art.approved-hero{display:flex !important;align-items:center;justify-content:center;height:auto !important;min-height:450px;overflow:visible;isolation:auto;margin:0;padding:0}\n    .approved-hero::before,.approved-hero::after{content:none !important}\n    .approved-hero-image{display:block;width:min(100%,520px);height:auto;max-width:100%;object-fit:contain;box-shadow:none;border:0;border-radius:0}\n    @media(max-width:900px){.hero-art.approved-hero{min-height:0}}\n    @media(max-width:750px){.hero-art.approved-hero{min-height:0;width:min(100%,470px);margin:0 auto}}\n</style>
+\n    /* Approved Figma homepage hero — keep full image visible at native aspect ratio. */
+    .hero .container{grid-template-columns:minmax(0,1.25fr) minmax(0,.85fr)}
+    .hero-art.approved-hero{display:flex !important;align-items:center;justify-content:center;min-width:0;width:100%;height:auto !important;min-height:440px;overflow:hidden;isolation:auto;margin:0;padding:0}
+    .approved-hero::before,.approved-hero::after{content:none !important}
+    .approved-hero-image{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;box-shadow:none;border:0;border-radius:0}
+    @media(max-width:990px){.hero .container{grid-template-columns:1fr}.hero-art.approved-hero{min-height:0;width:min(100%,520px);margin:0 auto}}
+    @media(max-width:750px){.hero-art.approved-hero{min-height:0;width:min(100%,460px);margin:0 auto}}
+    </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
