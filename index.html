@@ -322,19 +322,18 @@
 @media(min-width:901px){.project-card:first-child{align-items:stretch}.project-card:first-child .project-art{height:100%;aspect-ratio:auto;min-height:0}.project-card:first-child .portfolio-project-image{height:100%;width:100%;object-fit:cover;object-position:center}}
 @media(max-width:900px){.project-card:first-child .project-art{aspect-ratio:3/2;height:auto}}
 
-/* Balanced three-screen Happy Camper feature, with visible rounded ends. */
-.project-card:first-child .featured-camp-art{position:relative;min-height:540px;aspect-ratio:auto;background:#d0ddc8;overflow:hidden;isolation:isolate}
-.project-card:first-child .featured-camp-art::before{content:"";position:absolute;width:49%;height:auto;aspect-ratio:1;background:rgba(238,245,222,.62);border:0;border-radius:50%;left:-16%;bottom:-24%;top:auto;right:auto;z-index:0}
-.project-card:first-child .featured-camp-art::after{content:"";position:absolute;width:43%;height:auto;aspect-ratio:1;background:rgba(101,133,122,.15);border:0;border-radius:50%;right:-11%;top:7%;left:auto;z-index:0}
-.featured-phone-stack{position:relative;z-index:2;width:min(90%,650px);height:475px;min-width:0;margin-inline:auto;display:block}
-.featured-phone{position:absolute;top:45px;width:31%;height:375px;background:#fff;border-radius:27px;overflow:hidden;box-shadow:0 14px 27px rgba(28,45,37,.19);transform-origin:center center}
-.featured-phone img{display:block;width:114%;height:auto;max-width:none;transform:translateX(-12%)}
-.featured-phone-left{left:1%;top:63px;transform:rotate(-5deg);z-index:1}
-.featured-phone-center{left:34.5%;top:32px;transform:scale(1.06);z-index:3}
-.featured-phone-right{right:1%;top:63px;transform:rotate(5deg);z-index:2}
+/* Consistent, upright portfolio previews from the three original PNG files.
+   Their transparent side gutters are corrected by the image crop. */
+.project-card:first-child .featured-camp-art{position:relative;min-height:470px;aspect-ratio:auto;background:#d0ddc8;overflow:hidden;isolation:isolate}
+.project-card:first-child .featured-camp-art::before{content:"";position:absolute;width:49%;height:auto;aspect-ratio:1;background:rgba(238,245,222,.55);border:0;border-radius:50%;left:-16%;bottom:-24%;top:auto;right:auto;z-index:0}
+.project-card:first-child .featured-camp-art::after{content:"";position:absolute;width:43%;height:auto;aspect-ratio:1;background:rgba(101,133,122,.12);border:0;border-radius:50%;right:-11%;top:7%;left:auto;z-index:0}
+.featured-phone-stack{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:clamp(10px,2vw,23px);width:min(89%,640px);height:425px;margin:0 auto;min-width:0}
+.featured-phone,.featured-phone-left,.featured-phone-center,.featured-phone-right{position:relative;top:auto;left:auto;right:auto;z-index:2;flex:1 1 0;min-width:0;max-width:194px;height:365px;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 12px 24px rgba(28,45,37,.16);transform:none}
+.featured-phone-center{transform:translateY(-9px);box-shadow:0 18px 30px rgba(28,45,37,.2)}
+.featured-phone img{display:block;width:117.65%;max-width:none;height:auto;transform:translateX(-13.8%)}
 .featured-camp-art .art-note{z-index:4}
-@media(max-width:900px){.project-card:first-child .featured-camp-art{min-height:440px}.featured-phone-stack{height:385px;width:min(94%,570px)}.featured-phone{height:315px}}
-@media(max-width:520px){.project-card:first-child .featured-camp-art{min-height:350px}.featured-phone-stack{height:300px;width:94%}.featured-phone{height:246px;border-radius:19px}.featured-phone-left{left:0;top:40px}.featured-phone-center{left:34.5%;top:22px}.featured-phone-right{right:0;top:40px}}
+@media(max-width:900px){.project-card:first-child .featured-camp-art{min-height:420px}.featured-phone-stack{height:365px;width:min(92%,590px);gap:15px}.featured-phone,.featured-phone-left,.featured-phone-center,.featured-phone-right{height:315px}}
+@media(max-width:520px){.project-card:first-child .featured-camp-art{min-height:310px}.featured-phone-stack{height:268px;width:93%;gap:8px}.featured-phone,.featured-phone-left,.featured-phone-center,.featured-phone-right{height:235px;border-radius:16px}.featured-phone-center{transform:translateY(-5px)}}
 </style>
 </head>
 <body>
